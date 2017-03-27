@@ -1,11 +1,11 @@
 /*
-Theme Name:  Claudia De Leon Blank Theme
-Theme URI: http://www.claudia-deleon.com/mmc6145/
+Theme Name:  BnB Photography Portfolio
+Theme URI: http://www.claudia-deleon.com/photography-site/
 Author: Claudia De Leon
-Description: Blank theme for WIE course
+Description: Photo Portfolio Theme for Wordpress
 Version: 0.1
 License: Open
-Text Domain: claudia_deleon_blank_template
+Text Domain: claudia_deleon_photography_portfolio
 */
 
 @import url("stylesheets/skeleton.css");
@@ -14,35 +14,5 @@ Text Domain: claudia_deleon_blank_template
 * {
   color: #000000;
   font-size: 14px;
-  line-height: 16px;
-}
-
-/* --- Menu --- */
-
-.blank-menu-header {
-  text-align: right;
-  margin-top: 40px;
-}
-
-.blank-menu-header ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  list-style-image: none;
-}
-
-.blank-menu-header li {
-  display: inline;
-}
-
-.blank-menu-header ul li a {
-  text-decoration: none;
-  margin: 4px;
-  padding: 5px 0 5px 40px;
-  font-weight: 300;
-  font-size: 1.4rem;
-}
-
-.blank-menu-header ul li a:hover {
-  color: #cccccc;
+  line-height: 1.5rem;
 }

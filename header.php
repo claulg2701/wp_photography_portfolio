@@ -2,7 +2,7 @@
 <html>
 	<head>
     <meta charset="utf-8">
-    <title>Claudia De Leon Blank Template</title>
+    <title>Photography Portfolio</title>
     <?php wp_head(); ?>
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
 	</head>
