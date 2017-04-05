@@ -29,7 +29,6 @@
               ));?>
             </div>
             <div class="search three columns"><?php get_search_form(); ?>
-              <i class="fa fa-search" aria-hidden="true"></i>
             </div>
           </div><!--end row -->
         </header>

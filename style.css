@@ -69,6 +69,11 @@ Text Domain: claudia_deleon_photography_portfolio
   padding-right: 1rem;
 }
 
+.menu-header li a:hover,
+.menu-header ul .current-menu-item a {
+  border-bottom: 2px solid #ffffff;
+}
+
 #menu-main-menu li a {
   color: #ffffff;
   text-decoration: none;
@@ -85,7 +90,7 @@ Text Domain: claudia_deleon_photography_portfolio
 
 .search.three.columns {
   float: right;
-  padding-right: 3em;
+  min-width: 220px;
   padding-top: 10px;
 }
 
@@ -105,11 +110,12 @@ Text Domain: claudia_deleon_photography_portfolio
 
 #s {
   position: relative;
-  background-color: transparent;
+  background-color: #ffffff;
   height: 36px;
   width: 170px;
   float: left;
   border: none;
+  border-radius: 4px 0 0 4px;
 }
 
 #searchsubmit {
@@ -121,8 +127,9 @@ Text Domain: claudia_deleon_photography_portfolio
   float: left;
   left: 0;
   border: none;
-  background-color: transparent;
+  background-color: #ffffff;
   color: transparent;
+  border-radius: 0 4px 4px 0;
 }
 
 i.fa.fa-search {
