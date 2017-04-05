@@ -10,8 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
 	</head>
 	<body>
-		<div class="container"> <!-- ends in footer -->
-			<header class="row">
+			<header>
   			<div class="row">
         	<div id="cd-logo" class="twelve columns">
         		<?php
@@ -22,13 +21,15 @@
         </div> <!--end row -->
           <!-- Menu Bar -->
         	<div id="menu-bar" class="row">
-            <div class="menu ten columns">
+            <div class="menu nine columns">
           		<?php
               wp_nav_menu(array(
               'sort_column' => 'menu_order',
-              'container_class' => 'blank-menu-header'
+              'container_class' => 'menu-header'
               ));?>
             </div>
-            <div class="search two columns"><?php get_search_form(); ?></div>
+            <div class="search three columns"><?php get_search_form(); ?>
+              <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
           </div><!--end row -->
         </header>

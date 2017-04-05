@@ -17,7 +17,8 @@ Text Domain: claudia_deleon_photography_portfolio
   line-height: 1.5rem;
 }
 
-.visuallyhidden {
+.visuallyhidden,
+.screen-reader-text {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -31,7 +32,7 @@ Text Domain: claudia_deleon_photography_portfolio
 /* Logo */
 
 #cd-logo {
-  margin: 1em auto;
+  margin: 2em auto;
   width: 100%;
   text-align: center;
 }
@@ -40,8 +41,95 @@ Text Domain: claudia_deleon_photography_portfolio
   max-width: 300px;
 }
 
+/* Menu Bar */
+
+#menu-bar {
+  background-color: #ffb4bb;
+}
+
+.menu-header {
+  height: 40px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
 /* Menu */
+
+#menu-main-menu {
+  height: 26px;
+}
+
+.menu-header ul {
+  margin: 1em 0;
+}
 
 #menu-main-menu li {
   display: inline;
+  vertical-align: -webkit-baseline-middle;
+  padding-right: 1rem;
+}
+
+#menu-main-menu li a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+.menu.nine.columns {
+  max-width: 960px;
+  padding-left: 5em;
+}
+
+/* Search */
+
+.search.three.columns {
+  float: right;
+  padding-right: 3em;
+  padding-top: 10px;
+}
+
+.searchform {
+  text-align: right;
+}
+
+.searchform div {
+  border: 2px solid #ffb4bb;
+  width: 228px;
+  height: 35px;
+  float: right;
+  right: 16px;
+  border-radius: 50px;
+  background-color: #ffffff;
+}
+
+#s {
+  position: relative;
+  background-color: transparent;
+  height: 36px;
+  width: 170px;
+  float: left;
+  border: none;
+}
+
+#searchsubmit {
+  position: relative;
+  width: 45px;
+  height: 36px;
+  padding: 0;
+  margin: 0;
+  float: left;
+  left: 0;
+  border: none;
+  background-color: transparent;
+  color: transparent;
+}
+
+i.fa.fa-search {
+  position: relative;
+  left: -35px;
+  top: 10px;
+  color: #303030;
+  cursor: pointer;
+  width: 0;
 }

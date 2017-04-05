@@ -10,7 +10,6 @@
           <?php dynamic_sidebar('footer-widget-three'); ?>
         </div>
       </footer>
-    </div> <!--end container class-->
     <?php wp_footer(); ?>
   </body>
 </html>
