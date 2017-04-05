@@ -1,6 +1,7 @@
 <?php get_header(); ?>
   <section class="row">
     <div class="twelve columns">
+      <p>THIS IS INDEX.PHP</p>
       <!--Begin loop-->
         <?php if ( have_posts() ) {
                 while ( have_posts() ) {

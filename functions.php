@@ -46,9 +46,34 @@ function blank_widgets_init() {
 }
 add_action('widgets_init', 'blank_widgets_init');
 
+
+/*---------------- Site Logo -----------------*/
+
+add_theme_support( 'custom-logo' );
+
+function theme_prefix_setup() {
+
+	add_theme_support( 'custom-logo', array(
+		'height'      => 100,
+		'width'       => 200,
+		'flex-width' => true,
+    'flex-height' => true,
+	) );
+
+}
+
+add_action( 'after_setup_theme', 'theme_prefix_setup' );
+
 /*-------------- Enable Menu --------------- */
 add_theme_support('menus');
 
 /*--- Enable Post Thumbnails ---*/
 add_theme_support( 'post-thumbnails' );
+
+/*--- Allow SVG image uploads ---*/
+function cc_mime_types( $mimes ){
+$mimes['svg'] = 'image/svg+xml';
+return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
 ?>
