@@ -11,12 +11,6 @@ Text Domain: claudia_deleon_photography_portfolio
 @import url("stylesheets/skeleton.css");
 @import url("stylesheets/normalize.css");
 
-* {
-  color: #000000;
-  font-size: 16px;
-  line-height: 1.5rem;
-}
-
 .visuallyhidden,
 .screen-reader-text {
   border: 0;
@@ -29,15 +23,27 @@ Text Domain: claudia_deleon_photography_portfolio
   width: 1px;
 }
 
+/* Fonts */
+
+* {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+ul li a {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
 /* Logo */
 
-#cd-logo {
+.cd-logo {
   margin: 2em auto;
   width: 100%;
   text-align: center;
 }
 
-#cd-logo img {
+.cd-logo img {
   max-width: 300px;
 }
 
@@ -139,4 +145,49 @@ i.fa.fa-search {
   color: #303030;
   cursor: pointer;
   width: 0;
+}
+
+
+/* Footer */
+
+.footer.row {
+  background-color: #303030;
+  width: 100%;
+  text-align: center;
+}
+
+.footer.row div {
+  text-align: center;
+}
+
+.footer.row div ul li {
+  display: inline;
+}
+
+#menu-main-menu-1 li a {
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+#menu-main-menu-1 li::after {
+  content: " / ";
+  color: #ffffff;
+  padding: 0 10px;
+}
+
+#copyright {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #fbfbfb;
+}
+
+.social.twelve.columns ul li {
+  padding: 0 0.5em;
+}
+
+.social.twelve.columns i {
+  color: #ffb4bb;
 }

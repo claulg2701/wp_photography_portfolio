@@ -12,7 +12,7 @@
 	<body>
 			<header>
   			<div class="row">
-        	<div id="cd-logo" class="twelve columns">
+        	<div class="cd-logo twelve columns">
         		<?php
               if ( function_exists( 'the_custom_logo' ) ) {
                 the_custom_logo();

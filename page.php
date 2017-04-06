@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 	<section class="row">
-		<div class="nine columns">
+		<div class="twelve columns">
       <!-- Begin page PHP-->
 			<?php if (have_posts()) :
 				/* data context	*/
@@ -11,10 +11,13 @@
 			endif; ?>
       <!-- End page PHP -->
 		</div>
+
+    <!-- Begin sidebar -->
+  	<div class="twelve columns">
+  		<?php get_sidebar(); ?>
+  	</div>
+    <!-- End sidebar -->
+
 	</section>
-  <!-- Begin sidebar -->
-	<div class="three columns">
-		<?php get_sidebar(); ?>
-	</div>
-  <!-- End sidebar -->
+
 <?php get_footer(); ?>

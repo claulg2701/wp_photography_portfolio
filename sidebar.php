@@ -1,1 +1,1 @@
-<?php dynamic_sidebar('first-widget'); ?>
+<?php dynamic_sidebar('recent-posts'); ?>

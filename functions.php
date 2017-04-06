@@ -1,15 +1,15 @@
 <?php
 /*-------------- Enable Widgets--------------- */
 
-function blank_widgets_init() {
+function theme_widgets_init() {
 	register_sidebar( array(
-		'name' => ('First Widget'),
-		'id' => 'first-widget',
-		'description' => 'Widget for our sidebar on pages',
-		'before_widget' => '<div class="widget-sidebar">',
+		'name' => ('Recent Posts Widget'),
+		'id' => 'recent-posts',
+		'description' => 'Widget for recent posts',
+		'before_widget' => '<div class="posts-widget">',
 		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>'
+		'before_title' => '<h3>',
+		'after_title' => '</h3>'
 		));
 
     /*--- New Widget --- */
@@ -44,7 +44,18 @@ function blank_widgets_init() {
 		'after_title' => '</h2>'
 		));
 }
-add_action('widgets_init', 'blank_widgets_init');
+add_action('widgets_init', 'theme_widgets_init');
+
+/*-------------Enqueue Google Fonts -------------*/
+function load_google_fonts() {
+	$query_args = array(
+		'family' => 'Open+Sans:400|Cookie:400|Oswald:700',
+		'subset' => 'latin,latin-ext',
+	);
+	wp_enqueue_style( 'load_google_fonts', add_query_arg( $query_args, "//fonts.googleapis.com/css" ), array(), null );
+            }
+
+add_action('wp_enqueue_scripts', 'google_fonts');
 
 
 /*---------------- Site Logo -----------------*/
