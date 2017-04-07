@@ -2,7 +2,8 @@
 /*-------------- Enable Widgets--------------- */
 
 function theme_widgets_init() {
-	register_sidebar( array(
+/*-------Recent Posts ------*/
+  register_sidebar( array(
 		'name' => ('Recent Posts Widget'),
 		'id' => 'recent-posts',
 		'description' => 'Widget for recent posts',
@@ -11,39 +12,8 @@ function theme_widgets_init() {
 		'before_title' => '<h3>',
 		'after_title' => '</h3>'
 		));
-
-    /*--- New Widget --- */
-	register_sidebar( array(
-		'name' => ('Footer Widget One'),
-		'id' => 'footer-widget-one',
-		'description' => 'First widget for our footer',
-		'before_widget' => '<div class="widget-footer">',
-		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>'
-		));
-	/*--- Second New Widget --- */
-	register_sidebar( array(
-		'name' => ('Footer Widget Two'),
-		'id' => 'footer-widget-two',
-		'description' => 'Second widget for our footer',
-		'before_widget' => '<div class="widget-footer">',
-		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>'
-		));
-
-  /*--- Third New Widget --- */
-	register_sidebar( array(
-		'name' => ('Footer Widget Three'),
-		'id' => 'footer-widget-three',
-		'description' => 'Third widget for our footer',
-		'before_widget' => '<div class="widget-footer">',
-		'after_widget' => '</div>',
-		'before_title' => '<h2>',
-		'after_title' => '</h2>'
-		));
 }
+
 add_action('widgets_init', 'theme_widgets_init');
 
 /*-------------Enqueue Google Fonts -------------*/
@@ -87,5 +57,16 @@ $mimes['svg'] = 'image/svg+xml';
 return $mimes;
 }
 add_filter( 'upload_mimes', 'cc_mime_types' );
+
+/*--- Enable Post Thumbnails ---*/
+
+add_theme_support( 'post-thumbnails' );
+/*add_image_size( 'nextPrevPost-thumb', 250, 95, true );*/
+
+/*-----------Call to Action ribbon----------*/
+function call_to_action_shortcode( $atts, $content = null ) {
+	return '<div class="cta_shortcode">' . $content . '</div>';
+}
+add_shortcode( 'caption', 'call_to_action_shortcode' );
 
 ?>
