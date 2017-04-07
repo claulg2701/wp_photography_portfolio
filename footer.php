@@ -22,5 +22,11 @@
       </div>
     <?php wp_footer(); ?>
     </footer>
+    <script>
+      $(function() { $('.unslider-banner').unslider({
+          autoplay: true
+          });
+      });
+    </script>
   </body>
 </html>
