@@ -154,6 +154,12 @@ i.fa.fa-search {
   text-align: center;
 }
 
+/* Post featured Image */
+
+.featured.img {
+  height: 320px;
+}
+
 /* Footer */
 
 .footer.row {
