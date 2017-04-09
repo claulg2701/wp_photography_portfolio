@@ -62,11 +62,20 @@ return $mimes;
 }
 add_filter( 'upload_mimes', 'cc_mime_types' );
 
-/*-----------Call to Action ribbon----------*/
-function call_to_action_shortcode( $atts, $content = null ) {
-	return '<div class="cta_shortcode">' . $content . '</div>';
+/*-----------Call to Action Passive----------*/
+function call_action( $atts, $content = null ) {
+	return '<div class="cta_shortcode">' . do_shortcode($content) . '</div>';
 }
-add_shortcode( 'caption', 'call_to_action_shortcode' );
+add_shortcode( 'caption', 'call_action' );
+add_shortcode( 'phone', 'call_action' );
+add_shortcode( 'email', 'call_action' );
+
+/*-----------Shortcode Button ----------*/
+function button_shortcode($atts, $content = null) {
+   extract(shortcode_atts(array('link' => '#'), $atts));
+   return '<a class="button" href="'.$link.'"><span>' . do_shortcode($content) . '</span></a>';
+}
+add_shortcode('button', 'button_shortcode');
 
 /*-----------Enqueue Unslider----------*/
 function enqueue_unslider() {
