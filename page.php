@@ -18,14 +18,6 @@
 			endif; ?>
       <!-- End page PHP -->
 		</div>
-    <!--Testing Unslider-->
-    <div class="unslider-banner">
-      <ul>
-        <li>This is my slider.</li>
-        <li>Pretty cool, huh?</li>
-        <li>Let's see...</li>
-      </ul>
-    </div>
 
     <!-- Begin sidebar -->
   	<div class="twelve columns">
