@@ -37,14 +37,32 @@
 
 <div class="twelve columns">
   <p>Taking an image, freezing the moment, reveals how rich reality truly is.</p>
-  <a class="cta-button" href="http://claudia-deleon.com/photography-site/contact/">Book Online</a>
+  <a class="cta-button" href="/photography-site/contact/">Book Online</a>
 </div>
 </section>
 <section class="row">
-<ul>
   <?php get_Galleries("Gallery");?>
-</ul>
+  <div class="intro twelve columns">
+    <h1>Our Phylosophy</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sit amet orci mollis,
+      ullamcorper tellus at, luctus justo. Quisque vitae lacus pharetra, tempus libero vel,
+      tempus neque. Sed sagittis id justo sed rutrum. In eget risus sit amet nisl mattis porta.
+    </p>
+  </div>
+  <div class="intro twelve columns">
+    <img src="/photography-site/wp-content/uploads/2017/04/wedding-promo.jpg" alt="">
+    <p>Wedding Packages from $799</p>
+    <a href="#">Contact Us</a>
+  </div>
 
+  <div class="unslider-banner">
+    <h1>What Clients are Saying</h1>
+    <ul>
+      <li>This is my slider.</li>
+      <li>Pretty cool, huh?</li>
+      <li>Let's see...</li>
+    </ul>
+  </div>
 </section>
 
 <?php get_footer(); ?>

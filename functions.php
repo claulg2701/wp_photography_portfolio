@@ -130,9 +130,9 @@ function get_Galleries($content){
     echo '<h2 class="visuallyhidden">'.$catVal->name.'</h2>'; //Parent Category
     $child_arg = array( 'hide_empty' => false, 'parent' => $catVal->term_id );
     $child_cat = get_terms( 'category', $child_arg );
-    echo '<ul>';
+    echo '<div class="twelve columns">';
         foreach( $child_cat as $child_term ) {
-        echo '<li>';
+        echo '<div class="three columns">';
         $args = array(
         'posts_per_page' => 1, //only display the latest post for this category
         'cat' => $child_term->term_id,
@@ -142,14 +142,15 @@ function get_Galleries($content){
           if ( $q->have_posts() ) {
               while ( $q->have_posts() ) {
               $q->the_post();
-                  the_post_thumbnail( 'full' );
-                  the_title();
-              }
+              the_post_thumbnail( 'full' );?>
+              <p class="cat-title"><?php the_title();?></p>
+              <?php
+            }
               wp_reset_postdata();
           }
-          echo '</li>';
+          echo '</div>';
         }
-    echo '</ul>';
+    echo '</div>';
     }
 }
 
