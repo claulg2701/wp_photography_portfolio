@@ -25,7 +25,8 @@
     <script>
       $(function() { $('.unslider-banner').unslider({
           autoplay: false,
-          arrows: false
+          arrows: false,
+          fluid:true
           });
       });
     </script>
