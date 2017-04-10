@@ -121,7 +121,7 @@ ul li a {
   width: 170px;
   float: left;
   border: none;
-  border-radius: 4px 0 0 4px;
+  border-radius: 45px 0 0 45px;
 }
 
 #searchsubmit {
@@ -135,7 +135,7 @@ ul li a {
   border: none;
   background-color: #ffffff;
   color: transparent;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 45px 45px 0;
 }
 
 i.fa.fa-search {
@@ -157,7 +157,7 @@ i.fa.fa-search {
 
 .unslider-banner + .unslider-nav {
   position: relative;
-  top: -30px;
+  top: -40px;
   float: left;
   margin-left: 25%;
 }
