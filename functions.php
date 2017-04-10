@@ -134,15 +134,15 @@ function get_Galleries($content){
         foreach( $child_cat as $child_term ) {
         echo '<li>';
         $args = array(
-        'posts_per_page' => 1, // we need only the latest post, so get that post only
-        'cat' => $child_term->term_id, // Use the category id, can also replace with category_name which uses category slug
-        //'category_name' => 'SLUG OF FOO CATEGORY,
+        'posts_per_page' => 1, //only display the latest post for this category
+        'cat' => $child_term->term_id,
           );
           $q = new WP_Query( $args);
 
           if ( $q->have_posts() ) {
               while ( $q->have_posts() ) {
               $q->the_post();
+                  the_post_thumbnail( 'full' );
                   the_title();
               }
               wp_reset_postdata();
