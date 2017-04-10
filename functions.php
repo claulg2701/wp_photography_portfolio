@@ -73,7 +73,7 @@ add_shortcode( 'email', 'call_action' );
 /*-----------Shortcode Button ----------*/
 function button_shortcode($atts, $content = null) {
    extract(shortcode_atts(array('link' => '#'), $atts));
-   return '<a class="button" href="'.$link.'"><span>' . do_shortcode($content) . '</span></a>';
+   return '<a class="cta-button" href="'.$link.'"><span>' . do_shortcode($content) . '</span></a>';
 }
 add_shortcode('button', 'button_shortcode');
 
@@ -118,4 +118,39 @@ function slider_unslider() {
 }
 
 add_action( 'init', 'slider_unslider' );
+
+/* ----------Get post by category ------------*/
+function get_Galleries($content){
+  $category = get_category_by_slug( $content );
+
+  $parent_cat_arg = array('hide_empty' => false, 'parent' => 0 );
+  $parent_cat = get_terms('category',$category);//category name
+
+  foreach ($parent_cat as $catVal) {
+    echo '<h2 class="visuallyhidden">'.$catVal->name.'</h2>'; //Parent Category
+    $child_arg = array( 'hide_empty' => false, 'parent' => $catVal->term_id );
+    $child_cat = get_terms( 'category', $child_arg );
+    echo '<ul>';
+        foreach( $child_cat as $child_term ) {
+        echo '<li>';
+        $args = array(
+        'posts_per_page' => 1, // we need only the latest post, so get that post only
+        'cat' => $child_term->term_id, // Use the category id, can also replace with category_name which uses category slug
+        //'category_name' => 'SLUG OF FOO CATEGORY,
+          );
+          $q = new WP_Query( $args);
+
+          if ( $q->have_posts() ) {
+              while ( $q->have_posts() ) {
+              $q->the_post();
+                  the_title();
+              }
+              wp_reset_postdata();
+          }
+          echo '</li>';
+        }
+    echo '</ul>';
+    }
+}
+
 ?>

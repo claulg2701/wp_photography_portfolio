@@ -36,8 +36,15 @@
 </div> <!-- end unslider -->
 
 <div class="twelve columns">
-
+  <p>Taking an image, freezing the moment, reveals how rich reality truly is.</p>
+  <a class="cta-button" href="http://claudia-deleon.com/photography-site/contact/">Book Online</a>
 </div>
+</section>
+<section class="row">
+<ul>
+  <?php get_Galleries("Gallery");?>
+</ul>
 
 </section>
+
 <?php get_footer(); ?>
