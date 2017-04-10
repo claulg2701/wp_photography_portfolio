@@ -1,23 +1,43 @@
 <?php get_header(); ?>
-  <section class="row">
-    <div class="twelve columns">
-      <p>THIS IS INDEX.PHP</p>
-      <!--Begin loop-->
-        <?php if ( have_posts() ) {
-                while ( have_posts() ) {
-                the_post();?>
-                <h3>
-                  <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                </h3>
-			          <?php if ( has_post_thumbnail() ) {
-	                    the_post_thumbnail('thumbnail');
-                }
-               the_excerpt(); ?>
-               <p><a href="<?php the_permalink(); ?>">Read More</a></p>
-        <?php } // end while
-          } // end if
-        ?>
-      <!--End loop-->
-    </div>
-  </section>
+
+<section class="row">
+	<h2 class="visuallyhidden">Homepage</h2>
+
+  <!--begin unslider-->
+  <div class="twelve columns unslider-banner">
+    <ul>
+      <?php
+          $args   = array( 'post_type' => 'Slider' );
+          $slides = new WP_Query( $args );
+
+          if( $slides->have_posts() ) {
+            while( $slides->have_posts() ) {
+              $slides->the_post();
+
+              /*--- Build Thumbnail URL ---*/
+              $thumb_id        = get_post_thumbnail_id();
+              $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+              $thumb_url       = $thumb_url_array[0];
+              ?>
+        <li style="background-image: url('<?php echo $thumb_url ?>'); height:600px;" class="slide-container">
+            <div class="slides-message">
+                <!--h1><?php the_title() ?></h1-->
+                <p><?php the_excerpt() ?></p>
+            </div>
+        </li>
+      <?php
+    }
+  }
+  else {
+    echo 'No Slides';
+  }
+?>
+  </ul>
+</div> <!-- end unslider -->
+
+<div class="twelve columns">
+
+</div>
+
+</section>
 <?php get_footer(); ?>

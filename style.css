@@ -8,8 +8,8 @@ License: Open
 Text Domain: claudia_deleon_photography_portfolio
 */
 
-@import url("stylesheets/skeleton.css");
-@import url("stylesheets/normalize.css");
+@import url('stylesheets/skeleton.css');
+@import url('stylesheets/normalize.css');
 
 .visuallyhidden,
 .screen-reader-text {
@@ -155,6 +155,13 @@ i.fa.fa-search {
   text-align: center;
 }
 
+.unslider-banner + .unslider-nav {
+  position: relative;
+  top: -30px;
+  float: left;
+  margin-left: 25%;
+}
+
 /* Post featured Image */
 
 .featured.img {
@@ -186,7 +193,7 @@ i.fa.fa-search {
 }
 
 #menu-main-menu-1 li::after {
-  content: " / ";
+  content: '/';
   color: #ffffff;
   padding: 0 10px;
 }

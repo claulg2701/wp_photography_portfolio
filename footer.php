@@ -24,7 +24,8 @@
     </footer>
     <script>
       $(function() { $('.unslider-banner').unslider({
-          autoplay: true
+          autoplay: false,
+          arrows: false
           });
       });
     </script>
