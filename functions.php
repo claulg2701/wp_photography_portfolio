@@ -62,17 +62,29 @@ return $mimes;
 }
 add_filter( 'upload_mimes', 'cc_mime_types' );
 
-/*-----------Call to Action Passive----------*/
+/*------------Clean p tags from shortcode ------*/
+function wpex_clean_shortcodes($content){
+$array = array (
+    '<p>[' => '[',
+    ']</p>' => ']',
+    ']<br />' => ']'
+);
+$content = strtr($content, $array);
+return $content;
+}
+add_filter('the_content', 'wpex_clean_shortcodes');
+
+/*-----------Call to Action Shortcode----------*/
 function call_action( $atts, $content = null ) {
   extract(shortcode_atts(array('class' => ''), $atts));
-	return '<div class="'.$class.'">' . do_shortcode($content) . '</div>';
+	return '<div class="'.$class.'">'.do_shortcode($content).'</div>';
 }
 add_shortcode( 'caption', 'call_action' );
 
 /*-----------Shortcode Button ----------*/
 function button_shortcode($atts, $content = null) {
    extract(shortcode_atts(array('link' => '#'), $atts));
-   return '<a class="button" href="'.$link.'"><span>' . do_shortcode($content) . '</span></a>';
+   return '<a class="button" href="'.$link.'">'.do_shortcode($content).'</a>';
 }
 add_shortcode('button', 'button_shortcode');
 
@@ -131,7 +143,7 @@ function get_Galleries($content){
     $child_cat = get_terms( 'category', $child_arg );
     echo '<div class="twelve columns">';
         foreach( $child_cat as $child_term ) {
-        echo '<div class="three columns">';
+        echo '<div class="featured three columns">';
         $args = array(
         'posts_per_page' => 1, //only display the latest post for this category
         'cat' => $child_term->term_id,
