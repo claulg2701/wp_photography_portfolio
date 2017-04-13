@@ -19,11 +19,8 @@
               $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
               $thumb_url       = $thumb_url_array[0];
               ?>
-        <li style="background-image: url('<?php echo $thumb_url ?>'); min-height:600px;" class="slide-container">
-            <div class="slides-message">
-                <!--h1><?php the_title() ?></h1-->
-                <p><?php the_excerpt() ?></p>
-            </div>
+          <li class="slide-container">
+            <img src="<?php echo $thumb_url ?>" alt="" title=""/>
         </li>
       <?php
     }
