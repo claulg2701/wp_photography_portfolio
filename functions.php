@@ -64,16 +64,15 @@ add_filter( 'upload_mimes', 'cc_mime_types' );
 
 /*-----------Call to Action Passive----------*/
 function call_action( $atts, $content = null ) {
-	return '<div class="cta_shortcode">' . do_shortcode($content) . '</div>';
+  extract(shortcode_atts(array('class' => ''), $atts));
+	return '<div class="'.$class.'">' . do_shortcode($content) . '</div>';
 }
 add_shortcode( 'caption', 'call_action' );
-add_shortcode( 'phone', 'call_action' );
-add_shortcode( 'email', 'call_action' );
 
 /*-----------Shortcode Button ----------*/
 function button_shortcode($atts, $content = null) {
    extract(shortcode_atts(array('link' => '#'), $atts));
-   return '<a class="cta-button" href="'.$link.'"><span>' . do_shortcode($content) . '</span></a>';
+   return '<a class="button" href="'.$link.'"><span>' . do_shortcode($content) . '</span></a>';
 }
 add_shortcode('button', 'button_shortcode');
 

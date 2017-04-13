@@ -23,7 +23,7 @@
     <?php wp_footer(); ?>
     </footer>
     <script>
-      $(function() { $('.unslider-banner').unslider({
+      $(function() { $('.my-unslider').unslider({
           autoplay: false,
           arrows: false,
           fluid:true

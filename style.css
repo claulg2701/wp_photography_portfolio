@@ -155,7 +155,7 @@ i.fa.fa-search {
   text-align: center;
 }
 
-.unslider-banner + .unslider-nav {
+.my-unslider.banner + .unslider-nav {
   position: relative;
   top: -40px;
   float: left;
@@ -201,6 +201,24 @@ p.cat-title {
   color: #ffffff;
   padding-bottom: 15px;
   padding-top: 15px;
+}
+
+.cta.twelve.columns,
+.promo.twelve.columns {
+  background-color: #303030;
+  text-align: center;
+  padding: 2.5em 0.5em;
+}
+
+.cta p,
+.cta a.button {
+  display: inline;
+}
+
+.cta p {
+  color: #ffffff;
+  font-family: 'Cookie', cursive;
+  font-size: 1.2em;
 }
 
 /* Footer */
