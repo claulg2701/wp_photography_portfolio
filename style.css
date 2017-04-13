@@ -156,6 +156,13 @@ i.fa.fa-search {
   overflow-y: hidden;
 }
 
+.unslider ul,
+.unslider li,
+.unslider ol {
+  padding: 0;
+  margin: 0;
+}
+
 .my-unslider.banner + .unslider-nav {
   position: relative;
   top: -40px;
@@ -252,7 +259,7 @@ p.cat-title {
   padding-left: calc(100% / 2 - 30em);
 }
 
-.cta a.button {
+.button {
   background-color: #ffb4bb;
   color: #303030;
   font-family: 'Oswald', sans-serif;

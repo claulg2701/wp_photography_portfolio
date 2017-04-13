@@ -49,7 +49,7 @@
   <div class="intro twelve columns">
     <img src="/photography-site/wp-content/uploads/2017/04/wedding-promo.jpg" alt="">
     <p>Wedding Packages from $799</p>
-    <a href="#">Contact Us</a>
+    <a class="button" href="#">Contact Us</a>
   </div>
 
   <div class="my-unslider text twelve columns">
