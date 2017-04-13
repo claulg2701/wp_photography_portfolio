@@ -138,16 +138,32 @@ function get_Galleries($content){
         'cat' => $child_term->term_id,
           );
           $q = new WP_Query( $args);
-
           if ( $q->have_posts() ) {
-              while ( $q->have_posts() ) {
+            while ( $q->have_posts() ) {
               $q->the_post();
-              the_post_thumbnail( 'full' );?>
-              <p class="cat-title"><?php the_title();?></p>
+              if(has_post_thumbnail()) {
+                the_post_thumbnail( 'full' );
+              } else {
+                echo '<img src="'.get_template_directory_uri().'/images/default_post.jpg" atl="" title=""/>';
+              }?>
+              <p class="cat-title">
               <?php
-            }
-              wp_reset_postdata();
-          }
+              $thetitle = get_the_title();
+              $getlength = strlen($thetitle);
+              $thelength = 25;
+              echo substr($thetitle, 0, $thelength);
+              if ($getlength > $thelength) echo "...";
+
+              $categories = get_the_category();
+              if ( ! empty( $categories ) ) {
+                echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+              }
+              ?>
+              </p>
+              <?php
+              }
+          wp_reset_postdata();
+        }
           echo '</div>';
         }
     echo '</div>';
