@@ -152,8 +152,10 @@ function get_Galleries($content){
           if ( $q->have_posts() ) {
             while ( $q->have_posts() ) {
               $q->the_post();
-              if(has_post_thumbnail()) {
-                the_post_thumbnail( 'full');
+              if(has_post_thumbnail()) {?>
+                <a class="my-img" href="<?php the_permalink();?>">
+                  <?php the_post_thumbnail( 'full');?></a>
+              <?php
               } else {
                 echo '<img src="'.get_template_directory_uri().'/images/default_post.jpg" atl="" title=""/>';
               }?>
@@ -168,7 +170,7 @@ function get_Galleries($content){
 
                 $categories = get_the_category();
                 if ( ! empty( $categories ) ) {
-                  echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+                  echo '<a class="my-img-cat" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
                 }
                 ?>
               </p>

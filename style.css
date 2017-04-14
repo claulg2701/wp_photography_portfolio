@@ -154,6 +154,7 @@ i.fa.fa-search {
   width: 100%;
   text-align: center;
   overflow-y: hidden;
+  position: relative;
 }
 
 .unslider ul,
@@ -163,34 +164,30 @@ i.fa.fa-search {
   margin: 0;
 }
 
-.my-unslider.banner + .unslider-nav {
-  position: relative;
-  top: -40px;
-  float: left;
-  margin-left: 25%;
-}
 
 .my-unslider.banner ul li.slide-container {
   line-height: 0;
   font-size: 0;
 }
 
-.shift::after {
-  display: block;
-  content: '';
-  clear: both;
+.unslider-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 90%;
+  z-index: 999;
 }
 
 /* Post featured Image */
 
-.featured.my-three.columns img {
+.my-img {
   -webkit-filter: grayscale(1);
   -webkit-filter: grayscale(100%);
   filter: gray;
   filter: grayscale(100%);
 }
 
-.featured.my-three.columns img:hover {
+.my-img:hover {
   -webkit-filter: none;
   -webkit-filter: none;
   filter: none;
@@ -227,7 +224,7 @@ div img {
   z-index: -1;
 }
 
-.featured.my-three.columns img:hover + .show-title,
+.my-img:hover + .show-title,
 .show-title:hover {
   z-index: 999;
   background-color: rgba(0, 0, 0, 0.35);
@@ -242,7 +239,7 @@ p.cat-title {
   text-transform: uppercase;
 }
 
-.cat-title a {
+.my-img-cat {
   background-color: #ffb4bb;
   padding: 0.3em 1em;
   color: #303030;
@@ -254,29 +251,11 @@ p.cat-title {
   text-transform: none;
 }
 
-@media ( min-width: 550px ) {
-  .featured.my-three.columns {
-    width: 100%;
-  }
-}
-
-@media ( min-width: 600px ) {
-  .featured.my-three.columns {
-    width: calc(100% / 2);
-  }
-}
-
-@media ( min-width: 1200px ) {
-  .featured.my-three.columns {
-    width: calc(100% / 4);
-  }
-}
-
 .cta.twelve.columns,
 .promo.twelve.columns {
   background-color: #303030;
   text-align: center;
-  padding: 2.5em 0.5em;
+  padding: 1em 1.2em;
 }
 
 .cta p {
@@ -298,25 +277,13 @@ p.cat-title {
   margin: 0 6em;
 }
 
-@media ( min-width: 1120px ) {
-  .cta p,
-  .cta a.button {
-    display: inline;
-  }
-  .cta a.button {
-    margin: 0 0 0 20em;
-    padding: 1em 2em;
-  }
-
-}
-
-.intro.twelve.columns,
 .my-unslider.text {
   padding: 3em 0;
+  background-color: #ffb4bb;
 }
 
-.my-unslider.text {
-  background-color: #ffb4bb;
+.intro.twelve.columns {
+  padding: 3em 1.2em 5em;
 }
 
 .intro.twelve.columns h1 {
@@ -334,6 +301,7 @@ p.cat-title {
 
 .my-unslider.text ul li {
   color: #ffffff;
+  margin-bottom: 1em;
 }
 
 .my-unslider.text h1 {
@@ -342,6 +310,31 @@ p.cat-title {
   color: #ffffff;
 }
 
+.my-unslider.text + nav.unslider-nav {
+  top: 80%;
+}
+
+/* --- wedding cta --- */
+
+.wedding.twelve.columns {
+  width: 100%;
+  min-height: 30vh;
+  background: url('/photography-site/wp-content/uploads/2017/04/wedding-pkg.jpg') no-repeat top;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: calc(50% - 62px) 1em;
+  text-align: center;
+}
+
+.wedding p {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #ffffff;
+}
 
 /* Footer */
 
@@ -385,4 +378,44 @@ p.cat-title {
 
 .social.twelve.columns i {
   color: #ffb4bb;
+}
+
+/* -----Media Queries -------- */
+
+@media ( min-width: 550px ) {
+  .featured.my-three.columns {
+    width: 100%;
+  }
+  .wedding.twelve.columns {
+    height: 70vh;
+  }
+}
+
+@media ( min-width: 600px ) {
+  .featured.my-three.columns {
+    width: calc(100% / 2);
+  }
+}
+
+@media ( min-width: 1120px ) {
+  .cta p,
+  .cta a.button {
+    display: inline;
+  }
+  .cta a.button {
+    margin: 0 0 0 20em;
+    padding: 1em 2em;
+  }
+
+  .cta.twelve.columns,
+  .promo.twelve.columns {
+    padding: 2.5em 0.5em;
+  }
+
+}
+
+@media ( min-width: 1200px ) {
+  .featured.my-three.columns {
+    width: calc(100% / 4);
+  }
 }

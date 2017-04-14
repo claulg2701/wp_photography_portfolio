@@ -46,8 +46,7 @@
       tempus neque. Sed sagittis id justo sed rutrum. In eget risus sit amet nisl mattis porta.
     </p>
   </div>
-  <div class="intro twelve columns">
-    <img src="/photography-site/wp-content/uploads/2017/04/wedding-promo.jpg" alt="">
+  <div class="wedding twelve columns">
     <p>Wedding Packages from $799</p>
     <a class="button" href="#">Contact Us</a>
   </div>
