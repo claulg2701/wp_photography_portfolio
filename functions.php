@@ -141,9 +141,9 @@ function get_Galleries($content){
     echo '<h2 class="visuallyhidden">'.$catVal->name.'</h2>'; //Parent Category
     $child_arg = array( 'hide_empty' => false, 'parent' => $catVal->term_id );
     $child_cat = get_terms( 'category', $child_arg );
-    echo '<div class="twelve columns">';
+    echo '<div class="featured my-container">';
         foreach( $child_cat as $child_term ) {
-        echo '<div class="featured three columns">';
+        echo '<div class="featured my-three columns">';
         $args = array(
         'posts_per_page' => 1, //only display the latest post for this category
         'cat' => $child_term->term_id,
@@ -153,24 +153,26 @@ function get_Galleries($content){
             while ( $q->have_posts() ) {
               $q->the_post();
               if(has_post_thumbnail()) {
-                the_post_thumbnail( 'full' );
+                the_post_thumbnail( 'full');
               } else {
                 echo '<img src="'.get_template_directory_uri().'/images/default_post.jpg" atl="" title=""/>';
               }?>
-              <p class="cat-title">
-              <?php
-              $thetitle = get_the_title();
-              $getlength = strlen($thetitle);
-              $thelength = 25;
-              echo substr($thetitle, 0, $thelength);
-              if ($getlength > $thelength) echo "...";
+              <div class="show-title">
+                <p class="cat-title">
+                <?php
+                $thetitle = get_the_title();
+                $getlength = strlen($thetitle);
+                $thelength = 25;
+                echo substr($thetitle, 0, $thelength);
+                if ($getlength > $thelength) echo "...";
 
-              $categories = get_the_category();
-              if ( ! empty( $categories ) ) {
-                echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-              }
-              ?>
+                $categories = get_the_category();
+                if ( ! empty( $categories ) ) {
+                  echo '<a href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+                }
+                ?>
               </p>
+            </div>
               <?php
               }
           wp_reset_postdata();
