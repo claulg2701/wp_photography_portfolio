@@ -213,6 +213,8 @@ div img {
   clear: both;
 }
 
+/* Gallery layout in functions.php */
+
 .featured.my-three.columns {
   margin: 0 0 -85px 0;
   padding: 0;
@@ -262,10 +264,9 @@ p.cat-title {
   color: #ffffff;
   font-family: 'Cookie', cursive;
   font-size: 1.2em;
-  color: #ffffff;
-  font-family: 'Cookie', cursive;
-  font-size: 1.2em;
   padding-left: calc(100% / 2 - 30em);
+  line-height: 2em;
+  margin: 1em 2em;
 }
 
 .button {
@@ -274,7 +275,6 @@ p.cat-title {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
-  margin: 0 6em;
 }
 
 .my-unslider.text {
@@ -340,6 +340,25 @@ p.cat-title {
   margin-bottom: 10em;
 }
 
+/* ----Pages --------- */
+
+.featured.img h2 {
+  padding: 3em;
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Cookie', cursive;
+}
+
+.content.six.columns {
+  padding-top: 2em;
+  width: calc(100% - 4em);
+  margin-left: 2em;
+}
+
+/* About */
+/* Contact */
+
+
 /* Footer */
 
 .footer.row {
@@ -398,6 +417,23 @@ p.cat-title {
   }
 }
 
+@media ( min-width: 640px ) {
+  .content.six.columns {
+    padding-top: 2em;
+    width: calc(50% - 2em);
+    margin-left: 2em;
+  }
+  .content.six.columns img {
+    margin-bottom: 2em;
+  }
+
+  .content.six.columns p {
+    margin-right: 2em;
+    line-height: 2em;
+  }
+
+}
+
 @media ( min-width: 1120px ) {
   .cta p,
   .cta a.button {
@@ -419,4 +455,21 @@ p.cat-title {
   .featured.my-three.columns {
     width: calc(100% / 4);
   }
+
+  .content.six.columns {
+    padding-top: 4em;
+    width: calc(50% - 8em);
+    margin-left: 4em;
+  }
+  .content.six.columns img {
+    margin-bottom: 4em;
+    max-width: 600px;
+    position: relative;
+    float: right;
+  }
+
+  .content.six.columns p {
+    margin-right: 4em;
+  }
+
 }

@@ -8,17 +8,15 @@
       </div>
     <?php
   }else {?>
-    <h2><?php the_title(); ?></h2>
-  <?php }?>
-		<div class="twelve columns">
-      <!-- Begin page content-->
-      <?php
+    <div class="twelve columns"><h2><?php the_title(); ?></h2></div>
+  <?php }
+      /* Begin page content */
+
       if ( have_posts() ) {
             the_post();
             the_content();
       } ?>
       <!-- End page PHP -->
-		</div>
 
     <!-- Begin sidebar -->
   	<div class="twelve columns">
