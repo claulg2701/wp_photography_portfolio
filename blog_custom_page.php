@@ -16,7 +16,7 @@ get_header(); ?>
         <h2><?php the_title(); ?></h2>
       <?php }?>
 
-      <div class="twelve columns">
+      <div class="multiple post eight columns">
           <?php if (have_posts()) :
               while (have_posts()) : the_post(); ?>
                   <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
@@ -31,6 +31,9 @@ get_header(); ?>
                   <p><?php _e('None found.','example'); ?></p>
               </div>
           <?php endif; wp_reset_query(); ?>
+      </div>
+      <div class="post four columns">
+        <?php get_sidebar( '2' ); ?>
       </div>
     </div>
 <?php get_footer(); ?>
