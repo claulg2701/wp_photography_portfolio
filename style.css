@@ -318,13 +318,11 @@ p.cat-title {
 
 .wedding.twelve.columns {
   width: 100%;
-  min-height: 30vh;
-  background: url('/photography-site/wp-content/uploads/2017/04/wedding-pkg.jpg') no-repeat top;
+  background: url('/photography-site/wp-content/uploads/2017/04/wedding-pkg.jpg') no-repeat center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  padding: calc(50% - 62px) 1em;
   text-align: center;
 }
 
@@ -334,6 +332,11 @@ p.cat-title {
   font-size: 1.5em;
   font-weight: 700;
   color: #ffffff;
+  padding-top: 10em;
+}
+
+.wedding a {
+  margin-bottom: 10em;
 }
 
 /* Footer */
@@ -385,9 +388,6 @@ p.cat-title {
 @media ( min-width: 550px ) {
   .featured.my-three.columns {
     width: 100%;
-  }
-  .wedding.twelve.columns {
-    height: 70vh;
   }
 }
 

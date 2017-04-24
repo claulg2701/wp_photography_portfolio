@@ -47,8 +47,8 @@
     </p>
   </div>
   <div class="wedding twelve columns">
-    <p>Wedding Packages from $799</p>
-    <a class="button" href="#">Contact Us</a>
+      <p>Wedding Packages from $799</p>
+      <a class="button" href="<?php echo home_url( '/contact/' );?>">Contact Us</a>
   </div>
 
   <div class="my-unslider text twelve columns">
