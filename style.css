@@ -277,6 +277,19 @@ p.cat-title {
   font-size: 1.2rem;
 }
 
+#wpforms-submit-178 {
+  background-color: #ffb4bb;
+  color: #303030;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0 30px;
+  border-radius: 5px;
+  height: 38px;
+  width: 150px;
+  text-transform: uppercase;
+}
+
 .my-unslider.text {
   padding: 3em 0;
   background-color: #ffb4bb;
@@ -357,6 +370,27 @@ p.cat-title {
 
 /* Contact */
 
+.content.six.columns h1 {
+  text-align: center;
+  font-family: 'Cookie', cursive;
+  color: #ffb4bb;
+}
+
+.contact-button {
+  text-align: center;
+}
+
+.contact-button p {
+  text-align: center;
+  padding: 45px 40px;
+  background-color: rgba(255, 180, 187, 0.44);
+  display: inline-block;
+}
+
+.contact-button i.fa {
+  font-size: 2em;
+}
+
 /* ------ Sidebar widget ------ */
 
 .posts-widget {
@@ -432,7 +466,7 @@ p.cat-title {
   .content.six.columns {
     padding-top: 2em;
     width: calc(50% - 2em);
-    margin-left: 2em;
+    margin: 1em;
   }
 
   /* About */
@@ -443,6 +477,11 @@ p.cat-title {
   .content.six.columns p {
     margin-right: 2em;
     line-height: 2em;
+  }
+
+  /* Contact form */
+  .wpforms-container-full {
+    max-width: 600px;
   }
 
 }
@@ -460,6 +499,11 @@ p.cat-title {
   .cta.twelve.columns,
   .promo.twelve.columns {
     padding: 2.5em 0.5em;
+  }
+
+  .content.six.columns h1 {
+    text-align: right;
+    padding-right: 2em;
   }
 
 }
