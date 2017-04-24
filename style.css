@@ -391,6 +391,21 @@ p.cat-title {
   font-size: 2em;
 }
 
+/* cta promo offer */
+
+.all_caps {
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.all_caps .underline {
+  text-decoration: underline;
+}
+
+.pink_text {
+  color: #ffb4bb;
+}
+
 /* ------ Sidebar widget ------ */
 
 .posts-widget {
