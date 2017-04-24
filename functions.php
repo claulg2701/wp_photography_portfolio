@@ -16,6 +16,17 @@ function theme_widgets_init() {
 		'before_title' => '<h3>',
 		'after_title' => '</h3>'
 		));
+
+    /*-------Blog Sidebar ------*/
+    register_sidebar( array(
+  		'name' => ('Blog Sidebar'),
+  		'id' => 'blog-sidebar',
+  		'description' => 'Widget for blog sidebar',
+  		'before_widget' => '<div class="blog-sidebar">',
+  		'after_widget' => '</div>',
+  		'before_title' => '<h3>',
+  		'after_title' => '</h3>'
+  		));
 }
 
 add_action('widgets_init', 'theme_widgets_init');
@@ -183,6 +194,26 @@ function get_Galleries($content){
         }
     echo '</div>';
     }
+}
+
+
+/* custom url menu from latest post */
+add_filter( 'wp_get_nav_menu_items', 'replace_placeholder_nav_menu_item_with_latest_post', 10, 3 );
+function replace_placeholder_nav_menu_item_with_latest_post( $items, $menu, $args ) {
+    foreach ( $items as $item ) {
+        if ( '#latestpost' != $item->url )
+            continue;
+        // Get the latest post
+        $latestpost = get_posts( array(
+            'numberposts' => 1,
+            'category_name' => 'blog'
+        ) );
+        if ( empty( $latestpost ) )
+            continue;
+        // Replace the placeholder with the real URL
+        $item->url = get_permalink( $latestpost[0]->ID );
+    }
+    return $items;
 }
 
 ?>
