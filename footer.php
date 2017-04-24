@@ -24,7 +24,7 @@
     </footer>
     <script>
       $(function() { $('.my-unslider').unslider({
-          autoplay: false,
+          autoplay: true,
           arrows: false,
           fluid:true
           });

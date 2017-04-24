@@ -72,7 +72,7 @@ ul li a {
 #menu-main-menu li {
   display: inline;
   vertical-align: -webkit-baseline-middle;
-  padding-right: 1rem;
+  padding-right: 6px;
 }
 
 .menu-header li a:hover,
@@ -89,7 +89,7 @@ ul li a {
 
 .menu.nine.columns {
   max-width: 960px;
-  padding-left: 5em;
+  padding-left: 1em;
 }
 
 /* Search */
@@ -174,7 +174,7 @@ i.fa.fa-search {
   position: absolute;
   left: 0;
   right: 0;
-  top: 90%;
+  top: 70%;
   z-index: 999;
 }
 
@@ -577,6 +577,10 @@ p.cat-title {
     margin: 1em;
   }
 
+  .unslider-nav {
+    top: 90%;
+  }
+
   /* About */
   .content.six.columns img {
     margin-bottom: 2em;
@@ -595,6 +599,15 @@ p.cat-title {
 }
 
 @media ( min-width: 1120px ) {
+
+  .menu.nine.columns {
+    padding-left: 5em;
+  }
+
+  #menu-main-menu li {
+    padding-right: 1em;
+  }
+
   .cta p,
   .cta a.button {
     display: inline;
