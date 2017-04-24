@@ -4,7 +4,7 @@
 get_header(); ?>
 
 <div class="row">
-	<div class="twelve columns">
+	<div class="blog twelve columns">
 		<?php if ( have_posts() ) : ?>
 			<h2>Archives</h2>
 			<?php

@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Archieve Page */
+/* Template Name: Category Page */
 
 get_header(); ?>
 
@@ -31,23 +31,12 @@ get_header(); ?>
           </a>
 
       </div>
-			<?php endwhile; ?> <!-- End Loop -->
-      <div class="eight columns page-navigation">
-        <?php
-        previous_posts_link( '<i class="fa fa-chevron-circle-left fa-lg" aria-hidden="true"></i>' );
-        echo "<span>&nbsp;&nbsp;</span>";
-        current_paged();
-        echo "<span>&nbsp;&nbsp;</span>";
-        next_posts_link( '<i class="fa fa-chevron-circle-right fa-lg" aria-hidden="true"></i>' );
-        ?>
-      </div>
-
-    <?php else: ?>
-			<p>Sorry, no posts matched your criteria.</p>
-		<?php endif; ?>
+			<?php endwhile;
+      endif; ?>
+      <!-- End Loop -->
 	</div> <!--end eight columns-->
   <div class="post four columns">
-    <?php get_sidebar( '2' ); ?>
+    <?php get_sidebar('2'); ?>
   </div>
 </div>
 <?php get_footer(); ?>
