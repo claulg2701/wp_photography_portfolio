@@ -453,6 +453,55 @@ p.cat-title {
   float: right;
 }
 
+.blog-sidebar h3 {
+  font-size: 1.5em;
+  color: #303030;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+}
+
+.blog-sidebar a {
+  text-decoration: none;
+  color: #303030;
+  font-weight: 400;
+}
+
+.blog-sidebar ul {
+  list-style-type: none;
+}
+
+.blog-sidebar ul li.cat-item {
+  border: 2px solid #ffb4bb;
+  display: inline-block;
+  min-width: 80px;
+  margin: 3px;
+  text-align: center;
+}
+
+.blog-sidebar ul li.cat-item a {
+  font-family: 'Cookie', cursive;
+  font-style: italic;
+  color: #ffb4bb;
+}
+
+.post.four.columns {
+  margin-left: 0;
+}
+
+/* Category */
+
+.cat.summary a {
+  color: #303030;
+  text-decoration: none;
+}
+
+.cat.summary h6 {
+  font-size: 1.5em;
+  color: #ffb4bb;
+  font-weight: 700;
+  font-family: 'Oswald', sans-serif;
+}
+
 
 /* Footer */
 

@@ -39,7 +39,7 @@
 			endif; ?>
 <!-- End single PHP -->
 		</div>
-    <div class="four columns">
+    <div class="post four columns">
       <?php get_sidebar( '2' ); ?>
     </div>
 	</div>
