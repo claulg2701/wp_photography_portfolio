@@ -54,9 +54,14 @@
   <div class="my-unslider text twelve columns">
     <h1>What Clients are Saying</h1>
     <ul>
-      <li>This is my slider.</li>
-      <li>Pretty cool, huh?</li>
-      <li>Let's see...</li>
+      <li>Choosing Brenda and Berny as our photographers for our engagement and wedding photos was the best decision we made. <br/> - <i>Jake & July</i></li>
+      <li>Congratulations! You've discovered the boldest and most talented photographer duo around. - Sophia Marshalls<br/> - <i>Nathalie Connor</i></li>
+      <li>They are so much fun and keep your ideas in mind while bringing their own amazing creativity to the table. <br/>- <i>Betsy Jones</i></li>
+      <li>We loved working with Brenda and Berny. It is one of the best decisions that we made in planning our wedding.<br/>- <i>Aaron & Liz</i></li>
+      <li>Having newborn photos done that captured the emotion of finally having baby was very important to me. <br/>- <i>Debbie Lee</i></li>
+      <li>I'm so happy that I found Brenda and Berny Photography while scouring the internet for newborn photographers.<br/> - <i>Alejandro McLure</i></li>
+      <li>We LOVE how our photos turned out! Brenda is amazing and incredibly professional, organized, friendly, and so easy to work with. <br/> - <i>The Jones</i></li>
+      <li>Berny is the most talented person I know. She is so friendly and made our family feel very comfortable, like we’ve known her for years!<br/> - <i>Belinda Chang</i></li>
     </ul>
   </div>
 </section>

@@ -297,11 +297,13 @@ p.cat-title {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
+  line-height: 2.5em;
 }
 
 .my-unslider.text ul li {
-  color: #ffffff;
+  color: #303030;
   margin-bottom: 1em;
+  line-height: 2.5em;
 }
 
 .my-unslider.text h1 {
@@ -328,11 +330,10 @@ p.cat-title {
 
 .wedding p {
   font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 700;
   color: #ffffff;
-  padding-top: 10em;
+  padding-top: 5em;
 }
 
 .wedding a {
